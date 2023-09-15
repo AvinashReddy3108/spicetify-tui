@@ -13,35 +13,12 @@
     ROOT
     ================================ */
 
-/* import */
-/* find more in https://fonts.google.com/?category=Monospace&sort=popularity */
-@import url("https://api.fonts.coollabs.io/css2?family=Anonymous+Pro:wght@400;700&family=Courier+Prime:wght@400;700&family=Cousine:wght@400;700&family=Cutive+Mono&family=DM+Mono:wght@300;400;500&family=Fira+Mono:wght@400;500;700&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Nanum+Gothic+Coding:wght@400;700&family=PT+Mono&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Share+Tech+Mono&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap");
+/* import webfont */
+@import url('https://api.fonts.coollabs.io/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /* user settings */
 :root {
-    --font-family: "DM Mono", monospace;
-    /*
-    --font-family: 'Anonymous Pro', monospace;
-    --font-family: 'Courier Prime', monospace;
-    --font-family: 'Cousine', monospace;
-    --font-family: 'Cutive Mono', monospace;
-    --font-family: 'DM Mono', monospace;
-    --font-family: 'Fira Mono', monospace;
-    --font-family: 'IBM Plex Mono', monospace;
-    --font-family: 'Inconsolata', monospace;
-    --font-family: 'Nanum Gothic Coding', monospace;
-    --font-family: 'PT Mono', monospace;
-    --font-family: 'Roboto Mono', monospace;
-    --font-family: 'Share Tech Mono', monospace;
-    --font-family: 'Source Code Pro', monospace;
-    --font-family: 'Space Mono', monospace;
-    --font-family: 'Ubuntu Mono', monospace;
-    --font-family: 'VT323', monospace;
-    */
-    --font-size: 14px;
-    --font-size-lyrics: 14px; /* 1.5em (default) */
-    --font-weight: 400; /* 200 : 900 */
-    --line-height: 1.2;
+    --font-family: 'JetBrains Mono', monospace;
 
     --display-card-image: block; /* none | block */
     --display-coverart-image: none; /* none | block */
@@ -57,21 +34,23 @@
 /* font */
 * {
     font-family: var(--font-family) !important;
-    font-size: var(--font-size) !important;
-    font-weight: var(--font-weight) !important;
-    line-height: var(--line-height);
 }
-.lyrics-lyricsContent-lyric {
-    font-size: var(--font-size-lyrics) !important;
+
+/* "Now playing" lyrics */
+.main-nowPlayingView-lyricsContent .lyrics-lyricsContent-lyric {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
 }
 
 /* images */
 .main-cardImage-imageWrapper img {
     display: var(--display-card-image);
 }
+
 .main-coverSlotCollapsed-container {
     display: var(--display-coverart-image);
 }
+
 .main-entityHeader-imageContainer,
 .under-main-view,
 .main-entityHeader-creatorWrapper .main-avatar-avatar,
@@ -80,11 +59,13 @@
 .profile-userOverview-imageContainer {
     display: var(--display-header-image);
 }
+
 .x-entityImage-imageContainer img,
 .main-yourLibraryX-rowCover img,
 .main-avatar-image {
     display: var(--display-library-image);
 }
+
 .main-trackList-rowImage {
     display: var(--display-tracklist-image);
 }
@@ -93,68 +74,84 @@
 .Root__top-container {
     --panel-gap: 16px !important;
 }
+
 .Root__top-bar {
     border: var(--border-width) solid transparent;
 }
+
 .Root__main-view,
 .Root__nav-bar,
 .Root__now-playing-bar {
     overflow: visible;
 }
+
 .main-view-container {
     overflow: hidden;
 }
+
 .main-topBar-container {
     width: 99.5%;
 }
+
 .main-topBar-background,
 .main-topBar-overlay,
 .main-home-homeHeader {
     background-color: var(--spice-main) !important;
     background-image: none;
 }
-/* .main-rootlist-wrapper,
+
+.main-trackList-rowPlayCount {
+    width: 17ch;
+}
+
+.LayoutResizer__resize-bar {
+    cursor: w-resize;
+}
+
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art,
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
+    bottom: 30em;
+}
+
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art {
+    -webkit-transform: scale(0.34375);
+    transform: scale(0.34375);
+}
+
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
+    -webkit-transform: none;
+    transform: none;
+}
+
+.tr1hDrJgoPSbMXlXU_sl {
+    flex-direction: column-reverse;
+}
+
+.npv-main-container .playback-bar {
+    position: unset;
+    width: auto;
+}
+
+.mbUrqWP55sK6zhspiR72 {
+    height: auto;
+}
+
+.Root__right-sidebar > section,
+section.main-buddyFeed-container {
+    width: auto !important;
+}
+
+.main-rootlist-wrapper,
 .main-rootlist-topSentinel,
 .main-rootlist-bottomSentinel,
 .main-rootlist-topSentinel div,
 .main-rootlist-bottomSentinel div {
     height: auto !important;
     contain: unset;
-} */
-.main-trackList-rowPlayCount {
-    width: 17ch;
-}
-.LayoutResizer__resize-bar {
-    cursor: w-resize;
-}
-.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art,
-.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
-    bottom: 18em;
-}
-.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art {
-    -webkit-transform: scale(0.34375);
-    transform: scale(0.34375);
-}
-.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
-    -webkit-transform: none;
-    transform: none;
-}
-.tr1hDrJgoPSbMXlXU_sl {
-    flex-direction: column-reverse;
-}
-.npv-main-container .playback-bar {
-    position: unset;
-    width: auto;
-}
-.mbUrqWP55sK6zhspiR72 {
-    height: auto;
-}
-.Root__right-sidebar > section,
-section.main-buddyFeed-container {
-    width: auto !important;
 }
 
 /* 1.2.11 backwards compatibility - for linux */
+
 /* pane borders */
 .main-yourLibraryX-entryPoints,
 .Root__main-view,
@@ -164,19 +161,23 @@ section.main-buddyFeed-container {
     border-radius: var(--border-radius) !important;
     background-color: var(--spice-main) !important;
 }
+
 .main-yourLibraryX-entryPoints:hover,
 .Root__main-view:hover,
 .Root__now-playing-bar:hover,
 .spotify__os--is-linux .Root__right-sidebar > div:nth-child(2):hover {
     border: var(--border-width) var(--border-style) var(--spice-border-active);
 }
+
 .main-nowPlayingBar-nowPlayingBar {
     padding: 8px 8px 32px 8px !important;
     height: 96px !important;
 }
+
 .Root__nav-bar {
     gap: var(--panel-gap) !important;
 }
+
 .spotify__os--is-linux .Root__top-container {
     padding-top: var(--panel-gap) !important;
 }
@@ -184,56 +185,74 @@ section.main-buddyFeed-container {
 /* recolor */
 :root {
     --spice-main-elevated: var(--spice-main);
-    --spice-highlight-elevated: var(--spice-highlight);
-    --spice-sidebar: var(--spice-main);
-    --spice-player: var(--spice-main);
-    --spice-card: var(--spice-main);
-    --spice-shadow: var(--spice-main);
-    --spice-selected-row: var(--spice-subtext);
-    --spice-button: var(--spice-accent);
-    --spice-button-active: var(--spice-accent-active);
-    --spice-button-disabled: var(--spice-accent-inactive);
-    --spice-tab-active: var(--spice-main);
     --spice-rgb-main-elevated: var(--spice-rgb-main);
+
+    --spice-highlight-elevated: var(--spice-highlight);
     --spice-rgb-highlight-elevated: var(--spice-rgb-highlight);
+
+    --spice-sidebar: var(--spice-main);
     --spice-rgb-sidebar: var(--spice-rgb-main);
+
+    --spice-player: var(--spice-main);
     --spice-rgb-player: var(--spice-rgb-main);
+
+    --spice-card: var(--spice-main);
     --spice-rgb-card: var(--spice-rgb-main);
+
+    --spice-shadow: var(--spice-main);
     --spice-rgb-shadow: var(--spice-rgb-main);
+
+    --spice-selected-row: var(--spice-subtext);
     --spice-rgb-selected-row: var(--spice-rgb-subtext);
+
+    --spice-button: var(--spice-accent);
     --spice-rgb-button: var(--spice-rgb-accent);
+
+    --spice-button-active: var(--spice-accent-active);
     --spice-rgb-button-active: var(--spice-rgb-accent-active);
+
+    --spice-button-disabled: var(--spice-accent-inactive);
     --spice-rgb-button-disabled: var(--spice-rgb-accent-inactive);
+
+    --spice-tab-active: var(--spice-main);
     --spice-rgb-tab-active: var(--spice-rgb-main);
 }
+
 .Root__top-container,
 .Root__nav-bar {
     background-color: var(--spice-main);
 }
+
 .main-playPauseButton-button {
     background-color: transparent;
     color: var(--spice-subtext);
 }
+
 .main-playPauseButton-button:focus,
 .main-playPauseButton-button:hover {
     transform: none;
     color: var(--spice-text);
 }
+
 #_R_G *:not([fill="none"]) {
     fill: var(--spice-button-active) !important;
 }
+
 #_R_G *:not([stroke="none"]) {
     stroke: var(--spice-button-active);
 }
+
 .main-trackList-playingIcon {
     filter: grayscale(1) opacity(0.2)
         drop-shadow(0 0 0 var(--spice-button-active))
         drop-shadow(0 0 0 var(--spice-button-active))
         drop-shadow(0 0 0 var(--spice-button-active));
 }
+
 ::placeholder {
     color: var(--spice-subtext);
 }
+
 .main-entityHeader-background,
 .main-entityHeader-backgroundColor,
 .main-entityHeader-overlay,
@@ -244,29 +263,35 @@ section.main-buddyFeed-container {
     background: transparent;
     background-image: none;
 }
+
 .progress-bar {
     --fg-color: var(--spice-button-active);
     --bg-color: var(--spice-button-disabled);
 }
+
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     mix-blend-mode: difference;
     color: var(--spice-button-active);
 }
+
 .main-trackList-placeholder,
 .Pns6F5g4OEwEpdmOWTLg,
 .eldivguzYznZgQoShJbe {
     background-color: var(--background-base);
     background-blend-mode: color-dodge;
 }
+
 .artist-artistAbout-container.artist-artistAbout-backgroundImage
     .artist-artistAbout-content
     > div {
     color: #fff;
 }
+
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
     background: var(--spice-main);
 }
+
 .main-trackList-trackListRow:focus-within,
 .main-trackList-trackListRow:hover,
 .main-contextMenu-menuItemButton:hover,
@@ -276,23 +301,27 @@ section.main-buddyFeed-container {
 .main-card-card[data-context-menu-open="true"] {
     background-color: rgba(var(--spice-rgb-highlight), 0.5);
 }
+
 .main-trackList-trackListRow.main-trackList-selected,
 .main-trackList-trackListRow.main-trackList-selected:hover,
 .BoxComponent-group-tinted-listRow-isInteractive-hasLeadingOrMedia-paddingBlockStart_8px-paddingBlockEnd_8px-minBlockSize_56px-padding_8px,
 .BoxComponent-group-tinted-listRow-isInteractive-hasFocus-hasLeadingOrMedia-paddingBlockStart_8px-paddingBlockEnd_8px-minBlockSize_56px-padding_8px {
     background-color: var(--spice-highlight);
 }
+
 .x-entityImage-imageContainer,
 .x-entityImage-imageContainer div,
 .fRZRXRIV2YBCFLYgwDAr {
     background-color: var(--spice-border-inactive);
 }
+
 .main-userWidget-boxCondensed,
 .main-userWidget-boxCondensed:focus-visible,
 .main-userWidget-boxCondensed:hover,
 .main-userWidget-boxCondensed[data-context-menu-open="true"] {
     background-color: var(--spice-border-inactive) !important;
 }
+
 .main-cardImage-imageWrapper {
     --card-color: var(--spice-border-inactive);
     -webkit-box-shadow: none;
@@ -308,6 +337,7 @@ section.main-buddyFeed-container {
     border-radius: var(--border-radius);
     background-color: var(--spice-main);
 }
+
 .main-yourLibraryX-entryPoints:hover,
 .Root__main-view:hover,
 .Root__now-playing-bar:hover,
@@ -328,21 +358,27 @@ section.main-buddyFeed-container {
     padding: 0 3px;
     z-index: 9;
 }
+
 .Root__nav-bar .main-yourLibraryX-entryPoints:nth-child(1)::before {
     content: "Pages";
 }
+
 .Root__nav-bar .main-yourLibraryX-entryPoints:nth-child(2)::before {
     content: "Library";
 }
+
 .Root__main-view::before {
     content: "Main";
 }
+
 .Root__now-playing-bar::before {
     content: "Playing";
 }
+
 .Root__right-sidebar > section:not(:empty)::before {
     content: "Sidebar";
 }
+
 .Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
 .Root__main-view:hover::before,
 .Root__now-playing-bar:hover::before,
@@ -358,6 +394,7 @@ section.main-buddyFeed-container {
     border-radius: var(--border-radius);
     width: 2px;
 }
+
 .os-theme-spotify
     > .os-scrollbar-vertical
     > .os-scrollbar-track
@@ -365,10 +402,12 @@ section.main-buddyFeed-container {
     border-radius: var(--border-radius);
     width: 6px;
 }
+
 .main-view-container__scroll-node > .os-scrollbar-vertical {
     top: 5px !important;
     right: 5px !important;
 }
+
 .os-scrollbar-handle {
     position: absolute;
     top: 0;
@@ -387,6 +426,7 @@ section.main-buddyFeed-container {
     border-radius: var(--border-radius);
     outline: 14px solid var(--spice-main) !important;
 }
+
 .GenericModal::before {
     content: "Modal";
     color: var(--spice-border-active);
@@ -396,6 +436,7 @@ section.main-buddyFeed-container {
     padding: 0 3px;
     z-index: 9;
 }
+
 .artist-artistAbout-modal {
     overflow: visible;
 }
@@ -409,6 +450,7 @@ section.main-buddyFeed-container {
     height: 24px;
     gap: 8px;
 }
+
 .main-yourLibraryX-navLink .home-icon,
 .main-yourLibraryX-navLink .search-icon,
 .main-yourLibraryX-navLinkActive .home-active-icon,
@@ -421,17 +463,21 @@ section.main-buddyFeed-container {
 .main-yourLibraryX-isScrolled {
     box-shadow: none;
 }
+
 .Wrapper-md-leading {
     margin-right: 8px;
 }
+
 .main-yourLibraryX-listRowSubtitle {
     display: none;
 }
+
 .main-yourLibraryX-listItemGroup {
     grid-template-rows: 24px !important;
     min-block-size: auto;
     padding: 4px 18px;
 }
+
 .x-entityImage-imageContainer,
 .x-entityImage-imageContainer div,
 .main-yourLibraryX-rowCover {
@@ -440,6 +486,7 @@ section.main-buddyFeed-container {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
 .x-entityImage-imagePlaceholder,
 .main-yourLibraryX-rowCover .Svg-img-textBrightAccent-24-icon {
     transform: scale(0.5);
@@ -456,64 +503,46 @@ section.main-buddyFeed-container {
     MAIN VIEW
     ================================ */
 
-/* check out a cool project: https://github.com/Rigellute/spotify-tui
-
-                         __   _  ____               __          _
-    _____ ____   ____   / /_ (_)/ __/__  __        / /_ __  __ (_)
-   / ___// __ \ / __ \ / __// // /_ / / / /______ / __// / / // /
-  (__  )/ /_/ // /_/ // /_ / // __// /_/ //_____// /_ / /_/ // /
- /____// .___/ \____/ \__//_//_/   \__, /        \__/ \__,_//_/
-      /_/                         /____/
-
-
-*/
-.main-home-home::before {
-    content: "   _________  ____  / /_(_) __/_  __      / /___  __(_)\A   / ___/ __ \\/ __ \\/ __/ / /_/ / / /_____/ __/ / / / /\A  (__  ) /_/ / /_/ / /_/ / __/ /_/ /_____/ /_/ /_/ / /\A /____/ .___/\\____/\\__/_/_/  \\__, /      \\__/\\__,_/_/\A     /_/                    /____/                      ";
-    white-space: pre-wrap;
-    padding: 32px;
-    color: var(--spice-banner);
-    line-height: 1.2;
-}
-.main-entityHeader-headerText::before {
-    content: "────█▀█▄▄▄▄─────██▄\A────█▀▄▄▄▄█─────█▀▀█\A─▄▄▄█─────█──▄▄▄█\A██▀▄█─▄██▀█─███▀█\A─▀▀▀──▀█▄█▀─▀█▄█▀\A";
-    white-space: pre-wrap;
-    padding-bottom: 32px;
-    color: var(--spice-banner);
-    line-height: 1.2;
-}
-
 /* top bar */
 .queue-tabBar-active,
 .marketplace-tabBar-active {
     text-decoration: underline !important;
 }
+
 .main-topBar-historyButtons .main-topBar-button,
 .main-topBar-buddyFeed {
     background-color: transparent;
 }
+
 .main-topBar-button:first-child:before {
     content: "<";
 }
+
 .main-topBar-button.main-topBar-forward::before {
     content: ">";
 }
+
 .main-topBar-button:first-child > svg,
 .main-topBar-button.main-topBar-forward > svg {
     display: none;
 }
+
 .main-topBar-topbarContent {
     gap: 24px;
 }
+
 .x-searchInput-searchInputInput {
     border-radius: var(--border-radius);
     background-color: transparent;
 }
+
 .x-searchInput-searchInputInput:hover,
 .x-searchInput-searchInputInput:focus {
     box-shadow: none;
     border: 1px solid var(--spice-button-active);
     background-color: transparent;
 }
+
 .search-searchCategory-catergoryGrid * {
     border-radius: var(--border-radius);
 }
@@ -522,6 +551,7 @@ section.main-buddyFeed-container {
 .main-entityHeader-shadow {
     box-shadow: none;
 }
+
 .main-entityHeader-container.main-entityHeader-withBackgroundImage {
     background-image: radial-gradient(
         circle,
@@ -535,17 +565,21 @@ section.main-buddyFeed-container {
 .main-trackList-trackListRow {
     height: 32px;
 }
+
 .main-trackList-rowMainContent {
     grid-template: "title badges subtitle" / auto 1fr;
 }
+
 .main-trackList-rowImage {
     height: 24px;
     width: 24px;
 }
+
 .main-trackList-rowTitle::after {
     content: " |";
     color: var(--spice-highlight);
 }
+
 .main-trackList-number,
 .main-trackList-icon {
     top: unset;
@@ -555,12 +589,15 @@ section.main-buddyFeed-container {
 .lyrics-lyrics-background {
     background-color: var(--spice-main);
 }
+
 .main-nowPlayingView-sectionHeaderSpacing.main-nowPlayingView-lyricsGradient {
     background-color: var(--background-tinted-base);
 }
+
 .lyrics-lyrics-contentContainer {
     justify-content: start;
 }
+
 .lyrics-lyrics-container,
 .main-nowPlayingView-section {
     --lyrics-color-active: var(--spice-text) !important;
@@ -568,26 +605,25 @@ section.main-buddyFeed-container {
     --lyrics-color-passed: var(--spice-subtext) !important;
     --lyrics-color-messaging: var(--spice-subtext) !important;
 }
+
 .lyrics-lyricsContent-lyric {
     opacity: 0.3;
     display: flex;
     flex-direction: row;
 }
+
 .lyrics-lyricsContent-lyric.lyrics-lyricsContent-highlight {
     opacity: 0.7;
     transition: none;
 }
+
 .lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty) {
     background-color: var(--lyrics-color-background);
     color: var(--spice-main);
     opacity: 1;
     transition: none;
 }
-.lyrics-lyricsContent-lyric:not(:empty)::before {
-    content: ">> ";
-    opacity: 0;
-    white-space: break-spaces;
-}
+
 .lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty)::before {
     content: ">> ";
     opacity: 1;
@@ -608,6 +644,7 @@ section.main-buddyFeed-container {
     padding: 8px 8px 32px 8px;
     height: 96px;
 }
+
 .playback-bar {
     position: absolute;
     left: calc(var(--panel-gap) + 8px);
@@ -620,9 +657,11 @@ section.main-buddyFeed-container {
 .playback-bar__progress-time-elapsed {
     pointer-events: none;
 }
+
 .playback-bar__progress-time-elapsed::after {
     content: " /";
 }
+
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     z-index: 9;
@@ -633,10 +672,12 @@ section.main-buddyFeed-container {
 .playback-bar > .playback-progressbar {
     position: absolute;
 }
+
 .progress-bar {
     --progress-bar-height: 16px;
     --progress-bar-radius: var(--border-radius);
 }
+
 .progress-bar__slider {
     box-shadow: none;
     height: 100%;
@@ -648,13 +689,16 @@ section.main-buddyFeed-container {
     height: 32px !important;
     width: 32px !important;
 }
+
 [dir="ltr"] .main-coverSlotCollapsed-navAltContainer {
     -webkit-transform: none;
     transform: none;
 }
+
 [dir="ltr"] .main-nowPlayingWidget-coverExpanded {
     transform: translateX(-40px);
 }
+
 [dir="ltr"]
     .main-nowPlayingWidget-coverExpanded
     .main-coverSlotCollapsed-container.main-coverSlotCollapsed-navAltContainer {
@@ -683,6 +727,7 @@ section.main-buddyFeed-container {
     background-color: transparent;
     border-bottom: 2px dashed var(--fg-color);
 }
+
 .volume-bar__slider-container .x-progressBar-progressBarBg {
     background-color: transparent;
 }
@@ -691,20 +736,25 @@ section.main-buddyFeed-container {
 .player-controls__buttons {
     margin-bottom: 0;
 }
+
 .player-controls__buttons,
 .main-nowPlayingBar-extraControls {
     opacity: 0.25;
 }
+
 .player-controls__buttons:hover,
 .main-nowPlayingBar-extraControls:hover {
     opacity: 1;
 }
+
 .main-shuffleButton-button::before {
     content: "\21C4";
 }
+
 .main-skipBackButton-button::before {
     content: "\25C1";
 }
+
 .main-playPauseButton-button[aria-label="Play"]::before,
 .main-playPauseButton-button:has(
         path[d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"]
@@ -714,6 +764,7 @@ section.main-buddyFeed-container {
     )::before {
     content: "\25B6";
 }
+
 .main-playPauseButton-button[aria-label="Pause"]::before,
 .main-playPauseButton-button:has(
         path[d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"]
@@ -723,12 +774,15 @@ section.main-buddyFeed-container {
     )::before {
     content: "\275A\275A";
 }
+
 .main-skipForwardButton-button::before {
     content: "\25B7";
 }
+
 .main-repeatButton-button::before {
     content: "\21BB";
 }
+
 .main-shuffleButton-button > svg,
 .main-skipBackButton-button > svg,
 .main-playPauseButton-button > svg,
@@ -748,7 +802,13 @@ section.main-buddyFeed-container {
     bottom: var(--panel-gap);
     padding: 17px;
     opacity: 0.25;
+    border-radius: var(--border-radius) !important;
 }
+
+.main-connectBar-connectBar {
+    border-radius: var(--border-radius) !important;
+}
+
 .main-devicePicker-indicator.main-devicePicker-connected {
     display: none;
 }
