@@ -47,8 +47,8 @@ if ($PSVersionTable.PSVersion.Major -gt $PSMinVersion) {
 
   # Clone to .spicetify.
   Write-Part "DOWNLOADING    "; Write-Emphasized $sp_dot_dir
-  Invoke-WebRequest -Uri "https://raw.githubusercontent.com/AvinashReddy3108/spicetify-tui/main/tui/color.ini" -UseBasicParsing -OutFile "$sp_dot_dir\tui\color.ini"
-  Invoke-WebRequest -Uri "https://raw.githubusercontent.com/AvinashReddy3108/spicetify-tui/main/tui/user.css" -UseBasicParsing -OutFile "$sp_dot_dir\tui\user.css"
+  Invoke-WebRequest -Uri "https://raw.githubusercontent.com/AvinashReddy3108/spicetify-tui/master/tui/color.ini" -UseBasicParsing -OutFile "$sp_dot_dir\tui\color.ini"
+  Invoke-WebRequest -Uri "https://raw.githubusercontent.com/AvinashReddy3108/spicetify-tui/master/tui/user.css" -UseBasicParsing -OutFile "$sp_dot_dir\tui\user.css"
   Write-Done
 
   # Installing.
